@@ -1,0 +1,135 @@
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* Simple max-width container for content */
+.page-main {
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+/* Header + navbar */
+.site-header {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;      /* 🔥 stack children: logo on top, nav under */
+    align-items: flex-start;     /* align both to the left */
+    gap: 8px;                    /* space between logo and nav */
+}
+
+
+/* Logo (student name) */
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation styles */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Flexbox row for nav items */
+    display: flex;
+    gap: 15px;
+}
+
+/* Nav links */
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Simple hover effect */
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+/* Alternate background for variety */
+.section-alt {
+    background-color: #e9f5ff;
+}
+
+/* Section titles */
+.section h2 {
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 5px;
+}
+
+/* Projects row using flexbox */
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* Project cards */
+.project-card {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;   /* can grow to fill extra space */
+    flex-shrink: 1; /* can shrink if there isn't enough space */
+    flex-basis: 260px; /* preferred starting width */
+}
+
+/* Skills list */
+.skills-list {
+    padding-left: 20px;
+}
+
+/* Contact list */
+.contact-list {
+    padding-left: 20px;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Small screen tweaks */
+@media (max-width: 600px) {
+    .projects-row {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: column;   /* stack nav items vertically */
+        gap: 6px;
+      }
+
+    .main-nav a {
+        display: block;           /* makes each link behave like a full row */
+        padding: 4px 0;
+    }
+}
